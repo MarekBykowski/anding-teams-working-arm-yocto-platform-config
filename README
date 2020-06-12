@@ -1,0 +1,4 @@
+This repo handle the config necessary for each platfom.
+
+To add the bblayer configuration file your platform create a directory with the
+MACHINE name and add it there.
