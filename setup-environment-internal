@@ -359,6 +359,4 @@ Your build environment has been configured with:
 
 You can now run 'bitbake <target>'
 
-Available target is ${DISTRO}-image
-
 EOF
