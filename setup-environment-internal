@@ -250,6 +250,13 @@ SDKMACHINE ?= "${SDKMACHINE}"
 # Extra options that can be changed by the user
 INHERIT += "rm_work"
 EOF
+
+# If a machine provides some additional configuration, append it to auto.conf
+# to allow the user to change it in local.conf
+if [ -f "${OEROOT}/conf/${MACHINE}/local.conf" ]; then
+	cat "${OEROOT}/conf/${MACHINE}/local.conf" >> conf/auto.conf
+fi
+
 if [ ! -e conf/site.conf ]; then
     cat > conf/site.conf <<_EOF
 
